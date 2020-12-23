@@ -1,0 +1,24 @@
+<div class='container'>
+  <mat-card>
+    <p class='machines'>
+      Machines
+    </p>
+      <table class='table table-responsive table-lg'>
+        <thead class='thead-dark'>
+          <tr>
+            <th *ngFor='let column of displayedColumns' scope="col">{{ column }}</th>
+          </tr>            
+        </thead>
+        <tbody>
+          <tr *ngFor='let element of dataSource.filteredData'>
+            <th scope='row'>{{element.position}}</th>
+            <td><a [routerLink]='["/machine/1"]'>{{element.name}}</a></td>
+            <td>{{element.code}}</td>
+            <td>
+              <div class='red'></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+  </mat-card>
+</div>

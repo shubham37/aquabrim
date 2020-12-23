@@ -1,0 +1,61 @@
+<div class='flex'>
+    <div class='machine_detail container-fluid'>
+        Name :<span>Borewell</span>
+        Id :<span>0D012L</span>
+    </div>
+    <div>
+        <span class='alert'>Alert Events</span><br />
+        <div class='alerts' *ngFor='let msg of alert_message'>
+            <h6>Comm Error Rx</h6>
+            <h6>11:15 PM</h6>
+        </div>
+        <br /><br />
+        <div class='row'>
+            <div class='col-md-4 col-col-6'>
+                <mat-card class='controller'>
+                    <div class='row'>
+                        <div class='col sensor_image'>
+                            <a [routerLink]='["/sensor/1"]'>
+                                <img src='assets/images/tank.jpg' alt='...' style='width: 100%;' class='img-responsive' />
+                            </a>
+                        </div>
+                        <div class='col sensor_detail'>
+                            <h1>Controller Name</h1>
+                            <button mat-raised-button color='warn' style='width: 100%;'>ON</button>
+                            <p>
+                                Last Update: 14:20 14/01/2019
+                            </p>
+                            <p>
+                                Last Event: High at 14:20 14/01/2019
+                            </p>
+                        </div>
+                    </div>
+                </mat-card>
+                <br />
+            </div>
+
+            <div class='col-md-4 col-col-6' *ngFor='let msg of alert_message'>
+                <mat-card>
+                    <div class='row'>
+                        <div class='col sensor_image'>
+                            <a [routerLink]='["/sensor/1"]'>
+                                <img src='assets/images/tank.jpg' alt='...' style='width: 100%;' class='img-responsive' />
+                            </a>
+                        </div>
+                        <div class='col sensor_detail'>
+                            <h1>Sensor Name</h1>
+                            <h6>35 %</h6>
+                            <p>
+                                Last Update: 14:20 14/01/2019
+                            </p>
+                            <p>
+                                Last Event: High at 14:20 14/01/2019
+                            </p>
+                        </div>
+                    </div>
+                </mat-card>
+                <br />
+            </div>
+        </div>
+    </div>
+</div>

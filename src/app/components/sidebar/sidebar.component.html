@@ -1,0 +1,38 @@
+<div class="sidebar" [class.hide]="toggle">
+    <br />
+    <div class='setting'>
+        <span class='category'>Setting</span><br /><br />
+        <mat-divider></mat-divider>
+        <ul>
+            <li><a [routerLink]="['/setting/operational']">Operational</a></li>
+            <li><a [routerLink]="['/setting/error-alert']">Error Alert</a></li>
+            <li><a [routerLink]="['/setting/alert']">Alert</a></li>
+            <li><a [routerLink]="['/setting/alarm']">Alarm</a></li>
+            <li><a [routerLink]="['/setting/sensor']">Sensor</a></li>
+        </ul>
+    </div>
+    <br />
+    <div class='history'>
+        <span class='category'>History</span><br /><br />
+        <mat-divider></mat-divider>
+        <ul>
+            <li><a [routerLink]="['/history/op-alert']">OP Alert</a></li>
+            <li><a [routerLink]="['/history/errors']">Errors</a></li>
+            <li><a [routerLink]="['/history/event']">Event</a></li>
+        </ul>
+    </div>
+    <br />
+    <div class='other'>
+        <span class='category'>Common</span><br /><br />
+        <mat-divider></mat-divider>
+        <ul>
+            <li><a [routerLink]="['./about-us']">About us</a></li>
+            <li><a [routerLink]="['./contact']">Contact</a></li>
+            <li><a [routerLink]="['/faq']">FAQ</a></li>
+            <!-- <li><a [routerLink]="['/']">Account</a></li> -->
+            <li><a [routerLink]="['/forgot_password']">Change Password</a></li>
+            </ul>
+    </div>
+    <button mat-stroked-button class='btn logout'>Logout</button>
+    <br />
+</div>

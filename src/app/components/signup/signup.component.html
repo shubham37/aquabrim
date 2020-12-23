@@ -1,0 +1,71 @@
+<div class='card-body'>
+    <!-- Login Info -->
+    <form  [formGroup]="formGroup">
+        <legend class='login_info'>Sign Info</legend>
+        <!-- User Id -->
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='username'>
+                    <span>Full Name</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='text' id='inputField' placeholder='example@xyz.com' formControlName="username" />
+            </div>
+        </div>
+        <br />
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='password'>
+                    <span>Password</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='password' id='inputField' placeholder='password' formControlName="password" />
+            </div>
+        </div>
+        <br />
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='password'>
+                    <span>Confirm Password</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='password' id='inputField' placeholder='password' formControlName="password" />
+            </div>
+        </div>
+        <br />
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='email'>
+                    <span>Email</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='email' id='inputField' placeholder='example@xyz.com' formControlName="email" />
+            </div>
+        </div>
+        <br />
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='mobile'>
+                    <span>Mobile</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='text' id='inputField' placeholder='example@xyz.com' formControlName="mobile" />
+            </div>
+        </div>
+        <br />
+        <p style='text-align: center;'>
+            <button mat-button class='store' type='submit' (click)='onSubmit()' *ngIf='!isPorceessing'>Submit</button>
+            <span class='spinner-borderd text-danger' role='status' *ngIf='isPorceessing'></span>
+        </p>
+        <p class='create'>
+            <a [routerLink]='["/login"]'>Already have an account?</a>
+        </p>
+
+    </form>
+</div>
+

@@ -1,0 +1,47 @@
+@linkColor: rgb(114, 116, 114);
+.sidebar {
+    text-align: center;
+
+    .category {
+        // text-align: left;
+        font-size: large;
+        font-weight: bold;
+        font-family: Arial;
+    }
+    mat-divider {
+        color:rgb(2, 88, 52);
+    }
+    ul {
+
+        padding: 5px 0px;
+        padding-bottom: 0px;
+        li {
+            list-style: none;
+            margin-bottom: 10px;
+            a {
+                padding: 8px 15px 8px 15px;
+                display: block;
+                font-size: 14px;
+                border-radius: 4px;
+                color: @linkColor;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }  
+} 
+
+
+.logout {
+    width: 100%;
+    color: gray;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    &:hover {
+        background-color: white;
+        border: 1px solid red;
+        color: red;
+    }
+}

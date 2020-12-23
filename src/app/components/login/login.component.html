@@ -1,0 +1,40 @@
+<div class='card-body'>
+    <!-- Login Info -->
+    <form  [formGroup]="formGroup">
+        <legend class='login_info'>Login Info</legend>
+        <!-- User Id -->
+        <br />
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='userid'>
+                    <span>User ID(write your email ID)</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='email' id='inputField' placeholder='example@xyz.com' formControlName="userid" />
+            </div>
+        </div>
+        <br />
+        <div class='row'>
+            <div class='col-12' style='width:100%;'>
+                <label for='password'>
+                    <span>Password</span>
+                </label>
+            </div>
+            <div class='col-12' style='width:100%;'>
+                <input type='password' id='inputField' placeholder='password' formControlName="password" />
+            </div>
+        </div>
+        <br />
+        <p style='text-align: center; margin-top:1%;'>
+            <button mat-button class='store' type='submit' (click)='onSubmit()' *ngIf='!isPorceessing'>Submit
+                <span class='spinner-borderd text-danger' role='status' *ngIf='isPorceessing'></span>
+            </button><br /><br />
+            <a [routerLink]='["/forgot_password"]' class='fp'>Forgot Password</a><br />
+        </p>
+        <p class='create'>
+            <a [routerLink]='["/signup"]'>CREATE AN ACCOUNT</a>
+        </p>
+    </form>
+</div>
+

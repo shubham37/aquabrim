@@ -1,0 +1,30 @@
+@brandWidth: 33%;
+
+.main {
+    width: 100%;
+    box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    padding: 15px 2%;
+}
+.brand {
+    width: @brandWidth;
+    line-height: 32px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: Arial;
+    a {
+        color:rgba(6, 94, 42, 0.9);
+        text-decoration: none;
+    }
+}
+
+.set {
+    float: right;
+    text-align: right;
+    width: calc(100% - @brandWidth);
+    display: inline;
+    button {
+        border: none;
+        background-color: rgba(1,2,3,0.01);
+    }
+}
